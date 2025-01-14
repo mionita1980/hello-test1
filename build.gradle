@@ -60,6 +60,10 @@ tasks.named("dockerfileNative") {
     jdkVersion = "23"
 }
 
+dockerBuildNative {
+    images = ["mionita1980/hello-test1:latest"]
+}
+
 spotless {
     java {
         licenseHeaderFile(file("LICENSEHEADER"))
