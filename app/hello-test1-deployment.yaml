@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-test1
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: hello-test1
+  template:
+    metadata:
+      labels:
+        app: hello-test1
+    spec:
+      containers:
+      - image: mionita1980/hello-test1:latest
+        name: hello-test1
+        ports:
+        - containerPort: 8080
