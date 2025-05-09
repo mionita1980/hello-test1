@@ -24,3 +24,9 @@ You should get something like:
 ```
 
 Then connect using a browser to http://localhost:8080/hello and you should get back a `Hello World` message.
+
+## Deploy Image to K8S
+
+```bash
+kcl hello-test1.k | kubectl apply -f -
+```
